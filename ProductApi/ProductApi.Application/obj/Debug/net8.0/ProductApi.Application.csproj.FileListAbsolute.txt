@@ -1,0 +1,16 @@
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi\ProductApi.Application\bin\Debug\net8.0\ProductApi.Application.deps.json
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi\ProductApi.Application\bin\Debug\net8.0\ProductApi.Application.dll
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi\ProductApi.Application\bin\Debug\net8.0\ProductApi.Application.pdb
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi\ProductApi.Application\bin\Debug\net8.0\ProductApi.Core.dll
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi\ProductApi.Application\bin\Debug\net8.0\ProductApi.Core.pdb
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi\ProductApi.Application\obj\Debug\net8.0\ProductApi.Application.csproj.AssemblyReference.cache
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi\ProductApi.Application\obj\Debug\net8.0\ProductApi.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi\ProductApi.Application\obj\Debug\net8.0\ProductApi.Application.AssemblyInfoInputs.cache
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi\ProductApi.Application\obj\Debug\net8.0\ProductApi.Application.AssemblyInfo.cs
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi\ProductApi.Application\obj\Debug\net8.0\ProductApi.Application.csproj.CoreCompileInputs.cache
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi\ProductApi.Application\obj\Debug\net8.0\ProductApi.Application.sourcelink.json
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi\ProductApi.Application\obj\Debug\net8.0\ProductA.E443A747.Up2Date
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi\ProductApi.Application\obj\Debug\net8.0\ProductApi.Application.dll
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi\ProductApi.Application\obj\Debug\net8.0\refint\ProductApi.Application.dll
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi\ProductApi.Application\obj\Debug\net8.0\ProductApi.Application.pdb
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi\ProductApi.Application\obj\Debug\net8.0\ref\ProductApi.Application.dll
