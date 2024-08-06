@@ -1,0 +1,16 @@
+@model ProductApi.Mvc.Models.Product
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<h1>Product Details</h1>
+
+<div>
+    <h3>@Model.OPC</h3>
+    <p>ID: @Model.ID</p>
+    <p>CLO: @Model.CLO</p>
+
+</div>
+
+<a href="@Url.Action("Index", "Products")">Back to Search</a>

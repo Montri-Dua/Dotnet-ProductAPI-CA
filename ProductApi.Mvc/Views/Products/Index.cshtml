@@ -1,0 +1,58 @@
+@model IEnumerable<ProductApi.Mvc.Models.Product>
+
+@{
+    ViewData["Title"] = "Products";
+    int startPosition = ViewBag.StartPosition;
+    int pageSize = ViewBag.PageSize;
+}
+
+<h1>Products</h1>
+
+<form asp-action="Search" method="post" id="searchForm">
+    <div>
+        <label>OPC:</label>
+        <input type="text" id="opc" name="opc" required />
+        <label>CLO:</label>
+        <input type="text" id="clo" name="clo" />
+        <button type="submit">Search</button>
+        <button type="button" onclick="resetForm()">Reset</button>
+    </div>
+
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>OPC</th>
+            <th>CLO</th>
+            <th>ItemCode</th>
+            <th>RPL</th>
+            <th>ModifyDateTime</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.OPC</td>
+                <td>@product.CLO</td>
+                <td>@product.ItemCode</td>
+                <td>@product.RPL</td>
+                <td>@product.ModifyDateTime</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="Index" asp-route-startPosition="@(startPosition - pageSize < 0 ? 0 : startPosition - pageSize)" asp-route-pageSize="@pageSize" class="btn btn-primary">Previous</a>
+    <a asp-action="Index" asp-route-startPosition="@(startPosition + pageSize)" asp-route-pageSize="@pageSize" class="btn btn-primary">Next</a>
+</div>
+
+@section Scripts {
+    <script>
+        function resetForm() {
+            document.getElementById('searchForm').reset();
+        }
+    </script>
+}

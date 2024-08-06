@@ -61,11 +61,21 @@ namespace ProductApi.Infrastructure.Repositories
 
         public async Task<IEnumerable<Product>> GetProductbyopccloAsync(string opc, string clo, int startPosition, int pageSize)
         {
-            return await _context.Products.Where(product => product.OPC == opc && product.CLO == clo )
+            if(opc == "null"){
+                return await _context.Products.Skip(startPosition)
+                        .Take(pageSize)
+                        .ToListAsync();
+            }else if( clo == "null"){
+                return await _context.Products.Where(product => product.OPC == opc  )
                         .Skip(startPosition)
                         .Take(pageSize)
                         .ToListAsync();
-
+            }else{
+                return await _context.Products.Where(product => product.OPC == opc && product.CLO == clo )
+                        .Skip(startPosition)
+                        .Take(pageSize)
+                        .ToListAsync();
+            }
             // return await _context.Products.SingleAsync(product => product.OPC == opc);
         }
 
