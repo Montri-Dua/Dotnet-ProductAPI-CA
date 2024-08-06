@@ -51,7 +51,7 @@ namespace ProductApi.WebAPI.Controllers
             return Ok(product);
         }
 
-        [HttpGet("GetProductbyOPC")]
+        [HttpGet("GetProductbyopc")]
         public async Task<ActionResult<Product>> GetProductbyopc(string opc)
         {
             var product = await _productService.GetProductByopcAsync(opc);
@@ -63,7 +63,7 @@ namespace ProductApi.WebAPI.Controllers
             return Ok(product);
         }
 
-        [HttpGet("GetProductbyopcclo")]
+        [HttpGet("Products")]
         public async Task<ActionResult<Product>> GetProductbyopcclo(string opc, string clo, int startposition, int pagesize)
         {
             var product = await _productService.GetProductbyopcclo(opc, clo, startposition, pagesize);
@@ -101,5 +101,6 @@ namespace ProductApi.WebAPI.Controllers
             await _productService.DeleteProductAsync(id);
             return NoContent();
         }
+        
     }
 }

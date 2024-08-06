@@ -1,0 +1,7 @@
+**/.dockerignore
+**/.git
+**/.gitignore
+**/obj
+**/bin
+**/docker-compose*
+**/*.md

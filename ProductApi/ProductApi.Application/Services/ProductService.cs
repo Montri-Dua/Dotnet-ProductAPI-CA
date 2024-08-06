@@ -43,12 +43,12 @@ namespace ProductApi.Application.Services
             return _productRepository.DeleteProductAsync(id);
         }
 
-        public Task<Product> GetProductByopcAsync(string opc)
+        public Task<IEnumerable<Product>> GetProductByopcAsync(string opc)
         {
             return _productRepository.GetProductByopcAsync(opc);
         }
 
-        public Task<Product> GetProductbyopcclo(string opc, string clo, int startposition, int pagesize)
+        public Task<IEnumerable<Product>> GetProductbyopcclo(string opc, string clo, int startposition, int pagesize)
         {
             return _productRepository.GetProductbyopccloAsync(opc, clo, startposition, pagesize);
         }

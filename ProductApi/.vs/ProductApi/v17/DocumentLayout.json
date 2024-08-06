@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\montri.d\\Documents\\GitHub\\Dotnet-ProductAPI-CA\\ProductApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4095ADD2-881A-40A2-9DA3-A28AA9E21258}|ProductApi.WebAPI\\ProductApi.WebAPI.csproj|c:\\users\\montri.d\\documents\\github\\dotnet-productapi-ca\\productapi\\productapi.webapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4DDCDE23-6FDC-4E34-98D8-7F747DC0A870}|ProductApi.Core\\ProductApi.Core.csproj|c:\\users\\montri.d\\documents\\github\\dotnet-productapi-ca\\productapi\\productapi.core\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DDCDE23-6FDC-4E34-98D8-7F747DC0A870}|ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:productapi.core\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4095ADD2-881A-40A2-9DA3-A28AA9E21258}|ProductApi.WebAPI\\ProductApi.WebAPI.csproj|C:\\Users\\montri.d\\Documents\\GitHub\\Dotnet-ProductAPI-CA\\ProductApi\\productapi.webapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4095ADD2-881A-40A2-9DA3-A28AA9E21258}|ProductApi.WebAPI\\ProductApi.WebAPI.csproj|solutionrelative:productapi.webapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40A3D993-04EA-4DBB-9BAA-68B1CAE12564}|ProductApi.Application\\ProductApi.Application.csproj|C:\\Users\\montri.d\\Documents\\GitHub\\Dotnet-ProductAPI-CA\\ProductApi\\productapi.application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40A3D993-04EA-4DBB-9BAA-68B1CAE12564}|ProductApi.Application\\ProductApi.Application.csproj|solutionrelative:productapi.application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DDCDE23-6FDC-4E34-98D8-7F747DC0A870}|ProductApi.Core\\ProductApi.Core.csproj|C:\\Users\\montri.d\\Documents\\GitHub\\Dotnet-ProductAPI-CA\\ProductApi\\productapi.core\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DDCDE23-6FDC-4E34-98D8-7F747DC0A870}|ProductApi.Core\\ProductApi.Core.csproj|solutionrelative:productapi.core\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,20 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\montri.d\\Documents\\GitHub\\Dotnet-ProductAPI-CA\\ProductApi\\ProductApi.Application\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "ProductApi.Application\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\montri.d\\Documents\\GitHub\\Dotnet-ProductAPI-CA\\ProductApi\\ProductApi.Application\\Services\\ProductService.cs",
+              "RelativeToolTip": "ProductApi.Application\\Services\\ProductService.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAIA7wCYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T13:02:07.835Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\montri.d\\Documents\\GitHub\\Dotnet-ProductAPI-CA\\ProductApi\\ProductApi.Core\\Interfaces\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "ProductApi.Core\\Interfaces\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\montri.d\\Documents\\GitHub\\Dotnet-ProductAPI-CA\\ProductApi\\ProductApi.Core\\Interfaces\\IProductRepository.cs",
+              "RelativeToolTip": "ProductApi.Core\\Interfaces\\IProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T09:31:26.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\montri.d\\Documents\\GitHub\\Dotnet-ProductAPI-CA\\ProductApi\\ProductApi.Core\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "ProductApi.Core\\Entities\\Product.cs",
+              "ToolTip": "C:\\Users\\montri.d\\Documents\\GitHub\\Dotnet-ProductAPI-CA\\ProductApi\\ProductApi.Core\\Entities\\Product.cs",
+              "RelativeToolTip": "ProductApi.Core\\Entities\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T09:38:54.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\montri.d\\Documents\\GitHub\\Dotnet-ProductAPI-CA\\ProductApi\\ProductApi.WebAPI\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "ProductApi.WebAPI\\Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\montri.d\\Documents\\GitHub\\Dotnet-ProductAPI-CA\\ProductApi\\ProductApi.WebAPI\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "ProductApi.WebAPI\\Controllers\\ProductsController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAxwBgAAAAPAAAA",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAswEwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T08:47:23.279Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-05T08:47:23.279Z"
             }
           ]
         }

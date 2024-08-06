@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using ProductApi.Core.Entities;
 using ProductApi.Core.Interfaces;
 using ProductApi.Infrastructure.Data;
@@ -15,9 +16,9 @@ namespace ProductApi.Infrastructure.Repositories
         {
             _context = context;
         }
-        
-        public string GethealthZ(){
-           return "Hello, Clean Architecture!";
+        async Task<string> IProductRepository.GethealthZ()
+        {
+            return await Task.FromResult("OK");
         }
         public async Task<IEnumerable<Product>> GetAllProductsAsync()
         {
@@ -56,14 +57,21 @@ namespace ProductApi.Infrastructure.Repositories
             return await _context.Products.SingleAsync(product => product.OPC == opc);
         }
 
-         async Task<string>  IProductRepository.GethealthZ()
+
+
+        public async Task<IEnumerable<Product>> GetProductbyopccloAsync(string opc, string clo, int startPosition, int pageSize)
         {
-            return await Task.FromResult("OK");
+            return await _context.Products.Where(product => product.OPC == opc && product.CLO == clo )
+                        .Skip(startPosition)
+                        .Take(pageSize)
+                        .ToListAsync();
+
+            // return await _context.Products.SingleAsync(product => product.OPC == opc);
         }
 
-        public async Task<Product> GetProductbyopccloAsync(string opc, string clo, int startposition, int pagesize)
+        async Task<IEnumerable<Product>> IProductRepository.GetProductByopcAsync(string opc)
         {
-            return await _context.Products.SingleAsync(product => product.OPC == opc);
+            return await _context.Products.Where(Product => Product.OPC == opc).ToListAsync();
         }
     }
 }

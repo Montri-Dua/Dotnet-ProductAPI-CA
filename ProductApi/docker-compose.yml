@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  productapi:
+    image: productapi
+    container_name: productapi_container
+    build:
+      context: .
+      dockerfile: ProductApi.Api/Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - sqlserver
+    environment:
+      ConnectionStrings__DefaultConnection: "Server=localhost;Database=productDb;User Id=SA;Password=abcDEF123#;TrustServerCertificate=True;"

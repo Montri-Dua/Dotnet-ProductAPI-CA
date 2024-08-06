@@ -11,7 +11,7 @@ namespace ProductApi.Core.Interfaces
         Task AddProductAsync(Product product);
         Task UpdateProductAsync(Product product);
         Task DeleteProductAsync(int id);
-        Task<Product> GetProductByopcAsync(string opc);
-        Task<Product> GetProductbyopccloAsync(string opc, string clo, int startposition, int pagesize);
+        Task<IEnumerable<Product>> GetProductByopcAsync(string opc);
+        Task<IEnumerable<Product>> GetProductbyopccloAsync(string opc, string clo, int startposition, int pagesize);
     }
 }
