@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "1W56WBwLnbha8UCME4QkneMzATtGa6t+zEe+hicttqWn9zLOmDkaPPu3o1r8bLyX0g5oVugcLfMpAmN7sKyg/A==",
+  "dgSpecHash": "yX/XYqF7E9OlfvWfJexLk4QoaJqOIRNtPkr8V+dxahKYNeFDzOy2LwtlvxBNFqi90TLVN4AuqBQ578CFrCvX9g==",
   "success": true,
   "projectFilePath": "C:\\Users\\montri.d\\Documents\\GitHub\\Dotnet-ProductAPI-CA\\ProductApi.Mvc\\ProductApi.Mvc.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\montri.d\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\montri.d\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\montri.d\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\montri.d\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.5.0\\microsoft.identitymodel.abstractions.7.5.0.nupkg.sha512",
+    "C:\\Users\\montri.d\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.5.0\\microsoft.identitymodel.jsonwebtokens.7.5.0.nupkg.sha512",
+    "C:\\Users\\montri.d\\.nuget\\packages\\microsoft.identitymodel.logging\\7.5.0\\microsoft.identitymodel.logging.7.5.0.nupkg.sha512",
+    "C:\\Users\\montri.d\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.5.0\\microsoft.identitymodel.tokens.7.5.0.nupkg.sha512",
+    "C:\\Users\\montri.d\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\montri.d\\.nuget\\packages\\ng.jwttokenservice\\8.0.0\\ng.jwttokenservice.8.0.0.nupkg.sha512",
+    "C:\\Users\\montri.d\\.nuget\\packages\\popper.js\\1.16.1\\popper.js.1.16.1.nupkg.sha512",
+    "C:\\Users\\montri.d\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.5.0\\system.identitymodel.tokens.jwt.7.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

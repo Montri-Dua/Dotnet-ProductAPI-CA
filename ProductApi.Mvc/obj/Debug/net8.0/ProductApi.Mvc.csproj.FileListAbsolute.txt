@@ -6,6 +6,15 @@ C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\bin\Debug
 C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\bin\Debug\net8.0\ProductApi.Mvc.runtimeconfig.json
 C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\bin\Debug\net8.0\ProductApi.Mvc.dll
 C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\bin\Debug\net8.0\ProductApi.Mvc.pdb
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\bin\Debug\net8.0\JwtTokenService.dll
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\obj\Debug\net8.0\ProductApi.Mvc.csproj.AssemblyReference.cache
 C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\obj\Debug\net8.0\ProductApi.Mvc.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\obj\Debug\net8.0\ProductApi.Mvc.AssemblyInfoInputs.cache
 C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\obj\Debug\net8.0\ProductApi.Mvc.AssemblyInfo.cs
@@ -24,6 +33,7 @@ C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\obj\Debug
 C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\obj\Debug\net8.0\scopedcss\bundle\ProductApi.Mvc.styles.css
 C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\obj\Debug\net8.0\scopedcss\projectbundle\ProductApi.Mvc.bundle.scp.css
+C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\obj\Debug\net8.0\ProductA.E925672E.Up2Date
 C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\obj\Debug\net8.0\ProductApi.Mvc.dll
 C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\obj\Debug\net8.0\refint\ProductApi.Mvc.dll
 C:\Users\montri.d\Documents\GitHub\Dotnet-ProductAPI-CA\ProductApi.Mvc\obj\Debug\net8.0\ProductApi.Mvc.pdb

@@ -19,11 +19,12 @@ namespace ProductApi.Mvc.Controllers
 
         public async Task<IActionResult> Index(int? startPosition = 0, int? pageSize = 10)
         {
+
             _logger.LogInformation("Navigated to Index page." + startPosition + "-" + pageSize);
             int actualStartPosition = startPosition ?? 0;
             int actualPageSize = pageSize ?? 10;
 
-            var products = await _productService.GetProductByOpcAsync("null", "null", actualStartPosition, actualPageSize);
+            var products = await _productService.GetProductByOpcAsync(null, null,actualStartPosition, actualPageSize);
             ViewBag.StartPosition = actualStartPosition;
             ViewBag.PageSize = actualPageSize;
             return View(products);
@@ -35,7 +36,7 @@ namespace ProductApi.Mvc.Controllers
             _logger.LogInformation("Navigated to Index page." + opc + "-" + clo);
             int actualStartPosition = startPosition ?? 0;
             int actualPageSize = pageSize ?? 10;
-            if (clo == null) clo = "null";
+
             var products = await _productService.GetProductByOpcAsync(opc, clo, actualStartPosition, actualPageSize);
             ViewBag.StartPosition = actualStartPosition;
             ViewBag.PageSize = actualPageSize;
@@ -45,9 +46,33 @@ namespace ProductApi.Mvc.Controllers
                 return View("NotFound");
             }
 
-            ViewData["opcview"] = opc;
-            ViewData["cloview"] = clo;
             return View("Index", products);
+        }
+        public async Task<JsonResult> GetProductDetails(string opc)
+        {
+            _logger.LogInformation("GetProductDetails.------------------>" + opc );
+            /*            var product = new Product
+                        {
+                            OPC = "Sample Description",
+                            CLO = "xx",
+                            RPL = "Sample Product",
+
+                        };*/
+            var product = await _productService.GetProductByIdAsync(opc);
+            _logger.LogInformation("GetProductDetails product.------------------>" + product);
+            if (product != null)
+            {
+                return Json(new
+                {
+                    OPC = product.OPC,
+                    CLO = product.CLO,
+                    ItemCode = product.ItemCode,
+                    RPL = product.RPL,
+                    ModifyDateTime = product.ModifyDateTime
+                });
+
+            }
+            return Json(null);
         }
     }
 }

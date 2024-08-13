@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ProductApi.WebAPI.Controllers
 {
@@ -22,6 +23,7 @@ namespace ProductApi.WebAPI.Controllers
         }
 
         [HttpGet("healthZ")]
+        [Authorize]
         public async Task<ActionResult<string>> healthZ()
         {
             var product = await _productService.GethealthZ();
@@ -39,10 +41,10 @@ namespace ProductApi.WebAPI.Controllers
             return Ok(products);
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Product>> GetProduct(int id)
+        [HttpGet("{opc}")]
+        public async Task<ActionResult<Product>> GetProduct(string opc)
         {
-            var product = await _productService.GetProductByIdAsync(id);
+            var product = await _productService.GetProductByIdAsync(opc);
             if (product == null)
             {
                 return NotFound();
@@ -51,10 +53,11 @@ namespace ProductApi.WebAPI.Controllers
             return Ok(product);
         }
 
-        [HttpGet("GetProductbyopc")]
+        [HttpGet("Product")]
+        [Authorize]
         public async Task<ActionResult<Product>> GetProductbyopc(string opc)
         {
-            var product = await _productService.GetProductByopcAsync(opc);
+            var product = await _productService.GetProductByIdAsync(opc);
             if (product == null)
             {
                 return NotFound();
@@ -64,7 +67,8 @@ namespace ProductApi.WebAPI.Controllers
         }
 
         [HttpGet("Products")]
-        public async Task<ActionResult<Product>> GetProductbyopcclo(string opc, string clo, int startposition, int pagesize)
+        [Authorize]
+        public async Task<ActionResult<Product>> GetProductbyopcclo(string? opc, string? clo, int startposition, int pagesize)
         {
             var product = await _productService.GetProductbyopcclo(opc, clo, startposition, pagesize);
             if (product == null)
@@ -80,13 +84,13 @@ namespace ProductApi.WebAPI.Controllers
         public async Task<ActionResult<Product>> PostProduct(Product product)
         {
             await _productService.AddProductAsync(product);
-            return CreatedAtAction(nameof(GetProduct), new { id = product.ID }, product);
+            return CreatedAtAction(nameof(GetProduct), new { opc = product.OPC }, product);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProduct(int id, Product product)
+        public async Task<IActionResult> PutProduct(string opc, Product product)
         {
-            if (id != product.ID)
+            if (opc != product.OPC)
             {
                 return BadRequest();
             }
@@ -96,9 +100,9 @@ namespace ProductApi.WebAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteProduct(int id)
+        public async Task<IActionResult> DeleteProduct(string opc)
         {
-            await _productService.DeleteProductAsync(id);
+            await _productService.DeleteProductAsync(opc);
             return NoContent();
         }
         

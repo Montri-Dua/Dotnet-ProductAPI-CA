@@ -9,6 +9,7 @@ public class Startup
     public Startup(IConfiguration configuration)
     {
         configRoot = configuration;
+
     }
 
     public void ConfigureServices(IServiceCollection services)
@@ -22,6 +23,7 @@ public class Startup
             logging.AddConsole();
             logging.AddDebug();
         });
+
     }
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
     {

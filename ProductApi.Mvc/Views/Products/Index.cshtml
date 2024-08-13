@@ -4,55 +4,146 @@
     ViewData["Title"] = "Products";
     int startPosition = ViewBag.StartPosition;
     int pageSize = ViewBag.PageSize;
+    bool hasMoreProducts = ViewBag.HasMoreProducts ?? false;
 }
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
-<h1>Products</h1>
+<div class="container mt-4">
+    <h1 class="mb-4">Products</h1>
+    <form asp-action="Search" method="post" id="searchForm" class="form-inline mb-4">
 
-<form asp-action="Search" method="post" id="searchForm">
+        <div class="row">
+          <div class="col">
+                <label for="OPC" class="form-label">OPC</label>
+                <input type="text" id="opc" name="opc" class="form-control" placeholder="OPC" value="@ViewData["opcview"]" />
+          </div>
+          <div class="col">
+                <label for="CLO" class="form-label">CLO</label>
+                <input type="text" id="clo" name="clo" class="form-control" placeholder="CLO" value="@ViewData["cloview"]" />
+          </div>
+        </div>
+        <div class="row">
+            <div class ="col">
+                <button type="submit" class="btn btn-primary">Search</button>
+                <button type="submit" class="btn btn-secondary">Reset</button>
+            </div>
+        </div>
+    </form>
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>OPC</th>
+                <th>CLO</th>
+                <th>ItemCode</th>
+                <th>RPL</th>
+                <th>ModifyDateTime</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.OPC</td>
+                    <td>@product.CLO</td>
+                    <td>@product.ItemCode</td>
+                    <td>@product.RPL</td>
+                    <td>@product.ModifyDateTime</td>
+                    <td>
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#productModal" data-product-id=@product.OPC>
+                            View Product
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <form asp-action="Index" method="get" id="pagingForm" class="form-inline mb-4">
+        <div class="form-group mr-2">
+            <label for="pageSize" class="mr-2">Page Size:</label>
+            <input type="text" id="pageSize" name="pageSize" class="form-control" value="@pageSize" min="1" />
+        </div>
+        <button type="submit" class="btn btn-primary">Set Page Size</button>
+    </form>
+
+
     <div>
-        <label>OPC:</label>
-        <input type="text" id="opc" name="opc" required />
-        <label>CLO:</label>
-        <input type="text" id="clo" name="clo" />
-        <button type="submit">Search</button>
-        <button type="button" onclick="resetForm()">Reset</button>
+        <a asp-action="Index" asp-route-startPosition="@(startPosition - pageSize < 0 ? 0 : startPosition - pageSize)" asp-route-pageSize="@pageSize" class="btn btn-primary">Previous</a>
+        <a asp-action="Index" asp-route-startPosition="@(startPosition + pageSize)" asp-route-pageSize="@pageSize" class="btn btn-primary">Next</a>
     </div>
 
-</form>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>OPC</th>
-            <th>CLO</th>
-            <th>ItemCode</th>
-            <th>RPL</th>
-            <th>ModifyDateTime</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var product in Model)
-        {
-            <tr>
-                <td>@product.OPC</td>
-                <td>@product.CLO</td>
-                <td>@product.ItemCode</td>
-                <td>@product.RPL</td>
-                <td>@product.ModifyDateTime</td>
-            </tr>
-        }
-    </tbody>
-</table>
-
-<div>
-    <a asp-action="Index" asp-route-startPosition="@(startPosition - pageSize < 0 ? 0 : startPosition - pageSize)" asp-route-pageSize="@pageSize" class="btn btn-primary">Previous</a>
-    <a asp-action="Index" asp-route-startPosition="@(startPosition + pageSize)" asp-route-pageSize="@pageSize" class="btn btn-primary">Next</a>
 </div>
 
+    <!-- Modal Structure -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Content will be populated by AJAX -->
+                <label for="pageSize" class="mr-2">OPC:</label> <label id="OPC"></label><br/>
+                <label for="pageSize" class="mr-2">CLO:</label><label id="CLO"></label><br />
+                <label for="pageSize" class="mr-2">Itemcode:</label><label id="Itemcode"></label><br />
+                <label for="pageSize" class="mr-2">RPL:</label><label id="RPL"></label><br />
+                <label for="pageSize" class="mr-2">ModifyDateTime:</label> <p id="ModifyDateTime"></p><br />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 @section Scripts {
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        function resetForm() {
-            document.getElementById('searchForm').reset();
-        }
+        $(document).ready(function () {
+            $('#productModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget); // Button that triggered the modal
+                var productId = button.data('product-id'); // Extract info from data-* attributes
+
+                console.log('Product ID:', productId); // This should log the product ID
+
+                // AJAX call to get product details
+                $.ajax({
+                    url: '@Url.Action("GetProductDetails", "Products")',
+                    type: 'GET',
+                    data: { opc: productId },
+                    success: function (data) {
+                        console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",data);
+
+                        if (data) {
+                            $('#OPC').text(data.opc);
+                            $('#CLO').text(data.clo);
+                            $('#Itemcode').text(data.itemCode);
+                            $('#RPL').text(data.rpl);
+                            $('#ModifyDateTime').text(data.modifyDateTime);
+
+                        } else {
+                            modal.find('.modal-body').html('<p class="text-danger">Product not found.</p>');
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error:', error);
+                        $('.modal-body').html('<p class="text-danger">Unable to load product details.</p>');
+                    }
+                });
+            });
+        });
+
     </script>
 }
+
+
+
+

@@ -2,13 +2,13 @@ using ProductApi.Core.Entities;
 using ProductApi.Core.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-
+using Microsoft.Extensions.Logging;
 namespace ProductApi.Application.Services
 {
     public class ProductService
     {
         private readonly IProductRepository _productRepository;
-
+        private readonly ILogger<ProductService> _logger;
         public ProductService(IProductRepository productRepository)
         {
             _productRepository = productRepository;
@@ -23,9 +23,9 @@ namespace ProductApi.Application.Services
             return _productRepository.GetAllProductsAsync();
         }
 
-        public Task<Product> GetProductByIdAsync(int id)
+        public Task<Product> GetProductByIdAsync(string opc)
         {
-            return _productRepository.GetProductByIdAsync(id);
+            return _productRepository.GetProductByIdAsync(opc);
         }
 
         public Task AddProductAsync(Product product)
@@ -38,15 +38,15 @@ namespace ProductApi.Application.Services
             return _productRepository.UpdateProductAsync(product);
         }
 
-        public Task DeleteProductAsync(int id)
+        public Task DeleteProductAsync(string opc)
         {
-            return _productRepository.DeleteProductAsync(id);
+            return _productRepository.DeleteProductAsync(opc);
         }
 
-        public Task<IEnumerable<Product>> GetProductByopcAsync(string opc)
+/*        public Task<IEnumerable<Product>> GetProductByopcAsync(string opc)
         {
             return _productRepository.GetProductByopcAsync(opc);
-        }
+        }*/
 
         public Task<IEnumerable<Product>> GetProductbyopcclo(string opc, string clo, int startposition, int pagesize)
         {

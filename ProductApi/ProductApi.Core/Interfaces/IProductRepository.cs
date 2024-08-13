@@ -7,11 +7,11 @@ namespace ProductApi.Core.Interfaces
     {
         Task<string> GethealthZ();
         Task<IEnumerable<Product>> GetAllProductsAsync();
-        Task<Product> GetProductByIdAsync(int id);
+        Task<Product> GetProductByIdAsync(string opc);
         Task AddProductAsync(Product product);
         Task UpdateProductAsync(Product product);
-        Task DeleteProductAsync(int id);
-        Task<IEnumerable<Product>> GetProductByopcAsync(string opc);
+        Task DeleteProductAsync(string opc);
+        Task<Product> GetProductByopcAsync(string opc);
         Task<IEnumerable<Product>> GetProductbyopccloAsync(string opc, string clo, int startposition, int pagesize);
     }
 }
