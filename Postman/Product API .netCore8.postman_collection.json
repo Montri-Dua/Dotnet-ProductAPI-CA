@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "0abcfa9c-11ef-4678-8028-d4025c4f2c62",
+		"name": "Product API .netCore8",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25862866"
+	},
+	"item": [
+		{
+			"name": "GetAllProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5234/api/Products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5234",
+					"path": [
+						"api",
+						"Products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjAiLCJuYmYiOjE3MjMwOTg4MjcsImV4cCI6MTcyMzcwMzYyNywiaWF0IjoxNzIzMDk4ODI3fQ.QBfrJUaxU5NfG9bvaHp2NvPQBQ_0XWNE5Cbiq01n56o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5234/api/Products/healthZ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5234",
+					"path": [
+						"api",
+						"Products",
+						"healthZ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductByopc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5234/api/Products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5234",
+					"path": [
+						"api",
+						"Products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"opc\": \"OPC0009\",\r\n  \"clo\": \"CLO0007\",\r\n  \"itemCode\": \"P0007\",\r\n  \"rpl\": \"RPL0007\",\r\n  \"modifyDateTime\": \"2024-08-08T16:10:48.926Z\",\r\n  \"id\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5234/api/Products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5234",
+					"path": [
+						"api",
+						"Products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjAiLCJuYmYiOjE3MjM1Mzc3MzUsImV4cCI6MTcyNDE0MjUzNSwiaWF0IjoxNzIzNTM3NzM1fQ.Bs-oQSfWBa9d3YUkCe2tbl2KoWF23g-6Nx4P2-viKSU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5234/api/Products/Product?opc=OPC0004",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5234",
+					"path": [
+						"api",
+						"Products",
+						"Product"
+					],
+					"query": [
+						{
+							"key": "opc",
+							"value": "OPC0004"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjAiLCJuYmYiOjE3MjMxMDUyMjIsImV4cCI6MTcyMzcxMDAyMiwiaWF0IjoxNzIzMTA1MjIyfQ.P7tN6Fsgq-yht-tddi6KaF4dXkEZtOGfA5O7ZqnS1Sw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5234/api/Products/Products?opc=OPC0004&clo=CLO0004&startposition=0&pagesize=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5234",
+					"path": [
+						"api",
+						"Products",
+						"Products"
+					],
+					"query": [
+						{
+							"key": "opc",
+							"value": "OPC0004"
+						},
+						{
+							"key": "clo",
+							"value": "CLO0004"
+						},
+						{
+							"key": "startposition",
+							"value": "0"
+						},
+						{
+							"key": "pagesize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"montri1\",\r\n    \"password\": \"abcDEF123#\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5234/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5234",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"montri\",\r\n    \"password\": \"abcDEF123#\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5234/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5234",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
